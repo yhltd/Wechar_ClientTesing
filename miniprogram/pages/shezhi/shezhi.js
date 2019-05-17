@@ -6,8 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    appid: 'wxd747b7dd1d8f9e34',
-    secret: '3199a980a6b595e75c27de6864fdd3a5',
+    appid: 'wxf4c1f213d8b03948',
+    secret: '6f8ba7ec15aa21b23e495097ec3290b5',
     showView: true,
     text: '\n',
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
