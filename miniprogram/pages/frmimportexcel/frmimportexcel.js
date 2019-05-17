@@ -84,8 +84,8 @@ Page({
     var that = this;
     //参数2
     wx.cloud.downloadFile({
-      // fileID: 'cloud://yhltd-028b95.7968-yhltd-028b95/hljlc_xiangmujihuahuizongbiao/data/01-项目计划汇总表.xlsm', // 文件 ID
-      fileID:'cloud://yhltd-028b95.7968-yhltd-028b95/hljlc_xiangmujihuahuizongbiao/data/database_export-pxn4qHt7T2WJ.json', // 文件 ID,
+      // fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/hljlc_xiangmujihuahuizongbiao/data/01-项目计划汇总表.xlsm', // 文件 ID
+      fileID:'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/database_export-pxn4qHt7T2WJ.json', // 文件 ID,
       success: res => {
         console.log(res.tempFilePath)
         // getData(id, this);
@@ -140,7 +140,7 @@ Page({
     var that = this;
     //参数2
     wx.cloud.downloadFile({ 
-      fileID: 'cloud://yhltd-028b95.7968-yhltd-028b95/hljlc_xiangmujihuahuizongbiao/data/database_export-pxn4qHt7T2WJ.json', // 文件 ID,
+      fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/database_export-pxn4qHt7T2WJ.json', // 文件 ID,
       success: res => {
         console.log(res.tempFilePath)        
         var filepath1 = wx.env.USER_DATA_PATH + '/01-项目计划汇总表.xlsm';

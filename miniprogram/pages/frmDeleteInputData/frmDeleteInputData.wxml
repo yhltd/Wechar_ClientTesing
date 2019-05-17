@@ -8,13 +8,13 @@
   <view class="content-wrapper">
     <!-- date -->
     <view class="date-selection-wrapper">
-      <image src="cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/alarm.png" class="absolute-center-Y img-small-icon"></image>
+      <image src="cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/alarm.png" class="absolute-center-Y img-small-icon"></image>
       <picker class="date-picker" mode="date" value="{{selectedDate}}" end="{{endDate}}" bindchange="changeDate">
         <view class="selected-date">
           {{selectedDate}}
         </view>
       </picker>
-      <image src="cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/right_dot.png" class="absolute-center-Y img-small-icon img-right-20"></image>
+      <image src="cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/right_dot.png" class="absolute-center-Y img-small-icon img-right-20"></image>
     </view>
   </view>
 
@@ -23,13 +23,13 @@
   <view class="content-wrapper">
     <!-- date -->
     <view class="date-selection-wrapper">
-      <image src="cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/alarm.png" class="absolute-center-Y img-small-icon"></image>
+      <image src="cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/alarm.png" class="absolute-center-Y img-small-icon"></image>
       <picker class="date-picker" mode="date" value="{{selectedEndDate}}" end="{{endDate}}" bindchange="changeDate_end">
         <view class="selected-date">
           {{selectedEndDate}}
         </view>
       </picker>
-      <image src="cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/right_dot.png" class="absolute-center-Y img-small-icon img-right-20"></image>
+      <image src="cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/right_dot.png" class="absolute-center-Y img-small-icon img-right-20"></image>
     </view>
   </view>
   <view class="default-btn" bindtap="checkSchedule">立即删除</view>

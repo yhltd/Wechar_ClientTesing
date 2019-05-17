@@ -8,7 +8,7 @@ var showToastAuto = function(that) {
   wx.showToast({
     title: '闲赢：' + String(showmsg) + '%',
     image: '/images/btn.png',
-    // image: 'https://7968-yhltd-028b95-1258471393.tcb.qcloud.la/SY_LHDataAnalysis/btn.png?sign=455f4df0922c815857202c0bf7dbaa9a&t=1554721629',
+    // image: 'https://7968-yhltd-vw99c-1258471393.tcb.qcloud.la/SY_LHDataAnalysis/btn.png?sign=455f4df0922c815857202c0bf7dbaa9a&t=1554721629',
     duration: 2000,
     success: function(res) {
       self.setData({
@@ -411,7 +411,7 @@ Page({
 
                 //参数2
                 wx.cloud.downloadFile({
-                  fileID: 'cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/txt/data.txt', // 文件 ID
+                  fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/data.txt', // 文件 ID
                   success: res => {
 
                     console.log(res.tempFilePath)

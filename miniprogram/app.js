@@ -13,7 +13,7 @@ App({
     }, 
     appid: 'wxf4c1f213d8b03948', //填写微信小程序appid
     secret: '6f8ba7ec15aa21b23e495097ec3290b5',//填写微信小程序secret
-    imageInfopath: "cloud://yhltd-028b95.7968-yhltd-028b95/tupian/",
+    imageInfopath: "cloud://yhltd-vw99c.7968-yhltd-vw99c/tupian/",
     cookie: "",
     nickName: "",
     gender: "",

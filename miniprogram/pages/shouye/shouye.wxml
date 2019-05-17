@@ -19,8 +19,8 @@
 <import src="/pages/template/pai7.wxml" />
 <template is="tabBar7" data="{{tabBar,hiddenName7}}" />
 
-<!-- <view style="background-image: url('cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/all.png'); min-height:100%; background-size: 100% 100%;"> -->
-<view style="background-image: url('https://7968-yhltd-028b95-1258471393.tcb.qcloud.la/SY_LHDataAnalysis/all.png?sign=d743f66a81a93893569f7bf51a15c4dc&t=1554721482'); min-height:98%; background-size: 100% 100%;">
+<!-- <view style="background-image: url('cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/all.png'); min-height:100%; background-size: 100% 100%;"> -->
+<view style="background-image: url('https://7968-yhltd-vw99c-1258471393.tcb.qcloud.la/SY_LHDataAnalysis/all.png?sign=d743f66a81a93893569f7bf51a15c4dc&t=1554721482'); min-height:98%; background-size: 100% 100%;">
   <!-- <view class="a123"> -->
 
 
@@ -56,25 +56,25 @@
   <view class='paikongjian'>
     <view class='pai3'>
       <view bindtap='clickMe' class='puke3'>
-        <image src='cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/图案.jpg' class='beimian1' wx:if="{{!id}}"></image>
+        <image src='cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/图案.jpg' class='beimian1' wx:if="{{!id}}"></image>
         <view wx:if="{{id}}" class='zhengmian1'>{{idd}} </view>
       </view>
 
 
       <view bindtap='clickMe2' class='puke3'>
-        <image src='cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/图案.jpg' class='beimian1' wx:if="{{!id2}}"></image>
+        <image src='cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/图案.jpg' class='beimian1' wx:if="{{!id2}}"></image>
         <view wx:if="{{id2}}" class='zhengmian1'>{{idd2}} </view>
       </view>
 
     </view>
     <view class='pai3'>
       <view bindtap='clickMe3' class='puke3'>
-        <image src='cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/图案.jpg' class='beimian1' wx:if="{{!id3}}"></image>
+        <image src='cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/图案.jpg' class='beimian1' wx:if="{{!id3}}"></image>
         <view wx:if="{{id3}}" class='zhengmian1'>{{idd3}} </view>
       </view>
 
       <view bindtap='clickMe4' class='puke3'>
-        <image src='cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/图案.jpg' class='beimian1' wx:if="{{!id4}}"></image>
+        <image src='cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/图案.jpg' class='beimian1' wx:if="{{!id4}}"></image>
         <view wx:if="{{id4}}" class='zhengmian1'>{{idd4}} </view>
       </view>
     </view>
@@ -82,11 +82,11 @@
   <view class='pai2'>Z家和X家第三序号：</view>
   <view class='pai4'>
     <view bindtap='clickMe5' class='puke3'>
-      <image src='cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/图案.jpg' class='beimian' wx:if="{{!id5}}"></image>
+      <image src='cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/图案.jpg' class='beimian' wx:if="{{!id5}}"></image>
       <view wx:if="{{id5}}" class='zhengmian'>{{idd5}} </view>
     </view>
     <view bindtap='clickMe6' class='puke3'>
-      <image src='cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/图案.jpg' class='beimian' wx:if="{{!id6}}"></image>
+      <image src='cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/图案.jpg' class='beimian' wx:if="{{!id6}}"></image>
       <view wx:if="{{id6}}" class='zhengmian'>{{idd6}} </view>
     </view>
   </view>

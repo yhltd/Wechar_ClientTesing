@@ -1,5 +1,5 @@
 <!--pages/shuju/shuju.wxml-->
-<view style="background-image: url('https://7968-yhltd-028b95-1258471393.tcb.qcloud.la/SY_LHDataAnalysis/all.png?sign=d743f66a81a93893569f7bf51a15c4dc&t=1554721482'); min-height:98%; background-size: 100% 100%;">
+<view style="background-image: url('https://7968-yhltd-vw99c-1258471393.tcb.qcloud.la/SY_LHDataAnalysis/all.png?sign=d743f66a81a93893569f7bf51a15c4dc&t=1554721482'); min-height:98%; background-size: 100% 100%;">
 <!-- <view class='backimage'> -->
 <!-- <view class="a123"> -->
 <view class="lishi">历史数据：</view>

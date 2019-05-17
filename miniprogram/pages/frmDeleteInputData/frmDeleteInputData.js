@@ -51,7 +51,7 @@ Page({
     endCity: app.globalData.endCity,
     toast: {
       content: '',
-      iconUrl: 'cloud://yhltd-028b95.7968-yhltd-028b95/SY_LHDataAnalysis/warning.png',
+      iconUrl: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/warning.png',
       showToast: false
     }
   },
