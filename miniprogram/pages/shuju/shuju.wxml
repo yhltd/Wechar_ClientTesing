@@ -1,0 +1,38 @@
+<!--pages/shuju/shuju.wxml-->
+<view style="background-image: url('https://7968-yhltd-028b95-1258471393.tcb.qcloud.la/SY_LHDataAnalysis/all.png?sign=d743f66a81a93893569f7bf51a15c4dc&t=1554721482'); min-height:98%; background-size: 100% 100%;">
+<!-- <view class='backimage'> -->
+<!-- <view class="a123"> -->
+<view class="lishi">历史数据：</view>
+
+<!-- <view class="container">
+<!-- 分割线 -->
+<!-- <view class="divLine"></view>
+</view> --> 
+
+<view class='pai'>
+<view class='pai1'>Z前两序号:
+
+
+
+
+</view>
+<view class='pai1'>X前两序号：</view>
+<view class='pai1'>第三序号：</view>
+<view class='pai2'>比重：</view>
+</view>
+
+
+<view class="flex-column" id="panel" wx:for="{{all}}" wx:for-index='i' wx:key="" >
+
+<view  class="flex-cell flex-row">
+    <text class="flex-cell flex-row">{{all[i].shuju1}}</text>
+<text class="flex-cell flex-row">{{all[i].shuju2}}</text>
+    <text class="flex-cell flex-row">{{all[i].shuju3}}</text>
+<text class="flex-cell flex-row">{{all[i].shuju4}}</text>
+    <text class="flex-cell flex-row">{{all[i].shuju5}}</text>
+<text class="flex-cell flex-row">{{all[i].shuju6}}</text>
+    <text class="flex-cell flex-row">{{all[i].shuju7}}</text>
+    <!-- <button bindtap='shan' class="flex-cell flex-row">删</button> -->
+  </view>
+</view> 
+</view> 

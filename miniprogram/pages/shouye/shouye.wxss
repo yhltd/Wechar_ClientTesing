@@ -1,0 +1,157 @@
+/* pages/shouye/shouye.wxss */
+
+.zhuangxian {
+  display: flex;
+  height: 150%;
+}
+
+.zhuang {
+  width: 50%;
+  font-size: 50px;
+  color: red;
+  text-align: center;
+}
+
+.xian {
+  width: 50%;
+  font-size: 50px;
+  color: blue;
+  text-align: center;
+}
+
+.shenglv {
+  font-size: 20px;
+  color: rgb(145, 99, 99);
+  height: 50px;
+  display: flex;
+  margin: 10px 0 0 25px;
+  text-align: center;
+}
+
+.divLine {
+  background: #e0e3da;
+  width: 100%;
+  height: 20rpx;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.shoulu {
+  display: flex;
+}
+
+.pai1 {
+  font-size: 15px;
+  width: 50%;
+  text-align: center;
+  color: white;
+}
+
+.pai2 {
+  font-size: 15px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  width: 100%;
+}
+
+.button_left {
+  /* display: flex; */
+  width: 100%;
+  float: center;
+ 
+  line-height: 60px;
+  margin-right: 7rpx;
+}
+.buttom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+}
+/* .bai{
+  padding-bottom:6.5%;
+} */
+
+.pai3 {
+  display: flex;
+  width: 30%;
+  height: 100px;
+  margin: 0 10% 0 10%; 
+  
+}
+
+.beimian {
+  width: 100%;
+  height: 70px;
+}
+
+.beimian1 {
+  width: 100%;
+  height: 70px;
+}
+
+.paikongjian {
+  width: 100%;
+  display: flex;
+}
+
+.pai4 {
+  display: flex;
+  width: 30%;
+  height: 100px;
+  margin: 0 35% 0% 35%;
+}
+
+.shenglv1 {
+  background-color: rgba(26, 26, 26, 0.397);
+  width: 30%;
+  height: 25px;
+}
+
+page {
+  height: 100%;
+}
+
+/* .picker{
+  flex-direction:  column
+} */
+
+.zhengmian {
+  width:100%;
+  height: 70px;
+  background-color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zhengmian1 {
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a123 {
+  background-color: darkgreen;
+  min-height: 100%;
+  background-size: 100% 100%;
+}
+
+.puke3 {
+  width: 100%;
+}

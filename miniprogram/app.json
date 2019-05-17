@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/frmimportexcel/frmimportexcel",
+    "pages/login/login",
+    
+    "pages/shouye/shouye",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/shuju/shuju",
+    "pages/shezhi/shezhi",
+    "pages/yonghuguangli/yonghuguanli",
+    "pages/shedingcanshu/shedingcanshu",
+    "pages/adminform/index",
+    "pages/frmadminindex/frmadminindex",
+    "pages/frmedituser/frmedituser",
+    "pages/frmgerenxinxi/frmgerenxinxi",
+    "pages/frmbasedata/frmbasedata",
+    "pages/frmDeleteInputData/frmDeleteInputData",
+    "pages/frmcanshue_er/frmcanshue_er" 
+     
+  ],
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#262626",
+    "navigationBarTitleText": "SY模拟计算器",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#1afa29",
+    "borderStyle": "white",
+    "backgroundColor": "#eeeeee",
+    "list": [
+      {
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/shouyelv.png",
+        "pagePath": "pages/shouye/shouye",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/xinxi.png",
+        "selectedIconPath": "images/xinxilv.png",
+        "pagePath": "pages/shuju/shuju",
+        "text": "数据"
+      },
+      {
+        "iconPath": "images/yonghu.png",
+        "selectedIconPath": "images/yonghulv.png",
+        "pagePath": "pages/shezhi/shezhi",
+        "text": "设置"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,16 @@
+
+<template name="tabBar">    
+  <view  class="tab-bar" hidden="{{hiddenName}}"  style=" {{tabBar.position=='top'? 'top: 0' : 'bottom: 0'}}; {{tabBar.borderStyle? (tabBar.position=='top'? 'border-bottom: solid 1px '+tabBar.borderStyle + ';' : 'border-top: solid 1px '+tabBar.borderStyle + ';') : ''}}"> 
+ <block wx:for="{{tabBar.list}}"  wx:key=""  >    
+      <!-- <view  bindtap='click' class='menu-item4' data-index="{{index}}" wx:if="{{item.iconPath !=null}}"> -->
+      <!-- <image src="{{item.iconPath}}" class="img" id="{{item.id1}}"></image> 
+      </view>  -->
+
+    
+      <view class="menu-item1" bindtap='click' wx:if="{{item.text !=null}}"data-id="{{item.id}}"  id="{{item.idd}}">
+      {{item.text}}</view>
+      
+    </block>
+     
+    </view>
+</template>
