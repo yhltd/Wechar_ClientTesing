@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    all: []
+    all: [],
+    i:0
   },
 
   /**
@@ -157,15 +158,109 @@ Page({
             'Content-Type': 'application/json'
           },
           success: function (res) {
-            console.log(res.data.imgListData)
+         
             console.log('name2:' + res.data.imgListData[0].beizhu)
             //将获取到的json数据，存在名字叫list_data的这个数组中
             that.setData({
               all: res.data.imgListData
               //res代表success函数的事件对，data是固定的，imgListData是上面json数据中imgListData
             },
-              console.log(that.data.all)
+              // console.log(that.data.all)
             )
+          
+            // 上传数据库
+            const db = wx.cloud.database()
+            for (var i = 0; i < res.data.imgListData.length;i++){
+             
+              db.collection('SY_LHDataAnalysis_json').where({
+                index: i,
+              }) .get({
+                  success: function (res) {
+                    // console.log(res.data)
+                    // console.log(res.data[0]._id)
+                    // console.log(res.data[0].index)
+                    // console.log(res.data.imgListData)
+                    // console.log(that.data.all)
+                    // res.data 包含该记录的数据
+                    db.collection('SY_LHDataAnalysis_json').doc(res.data[0]._id).update({
+                      // data 传入需要局部更新的数据
+                      data: {
+                      
+                       
+                        xuhao_A: that.data.all[res.data[0].index].xuhao_A,
+                        tiaomaneirong_B: that.data.all[res.data[0].index].tiaomaneirong_B,
+                        tuhao_C: that.data.all[res.data[0].index].tuhao_C,
+                        mingcheng_D: that.data.all[res.data[0].index].mingcheng_D,
+                        caizhi_E: that.data.all[res.data[0].index].caizhi_E,
+                        shuliang_F: that.data.all[res.data[0].index].shuliang_F,
+                        danwei_G: that.data.all[res.data[0].index].danwei_G,
+                        taoshu_H: that.data.all[res.data[0].index].taoshu_H,
+                        xiangmujiaoqi_I: that.data.all[res.data[0].index].xiangmujiaoqi_I,
+                        zongshuliang_J: that.data.all[res.data[0].index].zongshuliang_J,
+                        wuliuzhouqi_K: that.data.all[res.data[0].index].wuliuzhouqi_K,
+                        zhuangpeizhouqi_L: that.data.all[res.data[0].index].zhuangpeizhouqi_L,
+                        lingjianchengpinzhouqi_M: that.data.all[res.data[0].index].lingjianchengpinzhouqi_M,
+                        shifouxuyao_N: that.data.all[res.data[0].index].shifouxuyao_N,
+                        bianmianchulizhouqi_O: that.data.all[res.data[0].index].bianmianchulizhouqi_O,
+                        lingjianbanchengpinzhouqi_P: that.data.all[res.data[0].index].lingjianbanchengpinzhouqi_P,
+                        beizhu_Q: that.data.all[res.data[0].index].beizhu_Q,
+                        genchuineirong_R: that.data.all[res.data[0].index].genchuineirong_R,
+                        genchuijiedian_S: that.data.all[res.data[0].index].genchuijiedian_S,
+                        xiatushijian_T: that.data.all[res.data[0].index].xiatushijian_T,
+                        xiaruriqi_U: that.data.all[res.data[0].index].xiaruriqi_U,
+                        xiangmubiaohao_V: that.data.all[res.data[0].index].xiangmubiaohao_V,
+                        tuhao1_W: that.data.all[res.data[0].index].tuhao1_W
+                      }
+                    }
+                      
+                    )
+                  },
+
+                  fail: function (res) {
+
+                    console.log(res.data)
+                    console.log(res.data[0]._id)
+                    console.log(res.data[0].index)
+                    console.log(res.data.imgListData)
+                    console.log(that.data.all)
+                    db.collection('SY_LHDataAnalysis_json').add({
+                      data:{
+                        // xuhao_A: that.data.all[res.data[0].index].xuhao_A,
+                        // tiaomaneirong_B: that.data.all[res.data[0].index].tiaomaneirong_B,
+                        // tuhao_C: that.data.all[res.data[0].index].tuhao_C,
+                        // mingcheng_D: that.data.all[res.data[0].index].mingcheng_D,
+                        // caizhi_E: that.data.all[res.data[0].index].caizhi_E,
+                        // shuliang_F: that.data.all[res.data[0].index].shuliang_F,
+                        // danwei_G: that.data.all[res.data[0].index].danwei_G,
+                        // taoshu_H: that.data.all[res.data[0].index].taoshu_H,
+                        // xiangmujiaoqi_I: that.data.all[res.data[0].index].xiangmujiaoqi_I,
+                        // zongshuliang_J: that.data.all[res.data[0].index].zongshuliang_J,
+                        // wuliuzhouqi_K: that.data.all[res.data[0].index].wuliuzhouqi_K,
+                        // zhuangpeizhouqi_L: that.data.all[res.data[0].index].zhuangpeizhouqi_L,
+                        // lingjianchengpinzhouqi_M: that.data.all[res.data[0].index].lingjianchengpinzhouqi_M,
+                        // shifouxuyao_N: that.data.all[res.data[0].index].shifouxuyao_N,
+                        // bianmianchulizhouqi_O: that.data.all[res.data[0].index].bianmianchulizhouqi_O,
+                        // lingjianbanchengpinzhouqi_P: that.data.all[res.data[0].index].lingjianbanchengpinzhouqi_P,
+                        // beizhu_Q: that.data.all[res.data[0].index].beizhu_Q,
+                        // genchuineirong_R: that.data.all[res.data[0].index].genchuineirong_R,
+                        // genchuijiedian_S: that.data.all[res.data[0].index].genchuijiedian_S,
+                        // xiatushijian_T: that.data.all[res.data[0].index].xiatushijian_T,
+                        // xiaruriqi_U: that.data.all[res.data[0].index].xiaruriqi_U,
+                        // xiangmubiaohao_V: that.data.all[res.data[0].index].xiangmubiaohao_V,
+                        // tuhao1_W: that.data.all[res.data[0].index].tuhao1_W
+
+
+
+                      }
+                    })
+
+                  }
+                })
+
+
+            
+            }
+
           }
         })
 
@@ -173,7 +268,8 @@ Page({
       fail: console.error
 
     })
-
+   
+  
 
   },
   /**

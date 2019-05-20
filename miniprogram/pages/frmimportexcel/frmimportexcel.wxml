@@ -10,9 +10,10 @@
   </view>
 
 </view>
-<view>
+<!-- <view> -->
 
-  <view style="background-image: url('https://7968-yhltd-vw99c-1259252488.tcb.qcloud.la/SY_LHDataAnalysis/28.png?sign=8854d2341c864859921b5ee5d39f796c&t=1558079759'); min-height:98%; background-size: 100% 100%;">
+  <!-- <view style="background-image: url('https://7968-yhltd-vw99c-1259252488.tcb.qcloud.la/SY_LHDataAnalysis/28.png?sign=8854d2341c864859921b5ee5d39f796c&t=1558079759'); min-height:98%; background-size: 100% 100%;"> -->
+    <view style=" min-height:98%; background-size: 100% 100%;">
 
     <view class="lishi">数据：</view>
 
@@ -20,64 +21,69 @@
       <!-- 分割线 -->
       <view class="divLine"></view>
     </view>
-    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
-      <view class='pai'>
-        <view class='pai1'>序号</view>
-        <view class='pai1'>条码内容</view>
-        <view class='pai1'>图号</view>
-        <view class='pai2'>名称</view>
-        <view class='pai2'>材质</view>
-        <view class='pai2'>数量</view>
-        <view class='pai2'>单位</view>
-        <view class='pai2'>套数</view>
-        <view class='pai2'>项目交期</view>
-        <view class='pai2'>总数量</view>
-        <view class='pai2'>物流周期</view>
-        <view class='pai2'>装配周期</view>
-        <view class='pai2'>零件成品交期</view>
-        <view class='pai2'>是否需要表面处理</view>
-        <view class='pai2'>表面处理周期</view>
-        <view class='pai2'>零件半成品交期</view>
-        <view class='pai2'>备注</view>
-        <view class='pai2'>跟催内容</view>
-        <view class='pai2'>跟催节点</view>
-        <view class='pai2'>下图时间</view>
-        <view class='pai2'>下图日期</view>
-        <view class='pai2'>项目编号</view>
-        <view class='pai2'>图号1</view>
-
+<scroll-view scroll-x class="root">
+  <!-- <form bindsubmit="formSubmit"> -->
+    
+    <view  class='table'>
+      <view  class="section-top">
+        <view class='input-top '>序号</view>
+        <view class='input-top '>条码内容</view>
+        <view class='input-top '>图号</view>
+        <view class='input-top '>名称</view>
+        <view class='input-top '>材质</view>
+        <view class='input-top '>数量</view>
+        <view class='input-top '>单位</view>
+        <view class='input-top '>套数</view>
+        <view class='input-top '>项目交期</view>
+        <view class='input-top '>总数量</view>
+        <view class='input-top '>物流周期</view>
+        <view class='input-top '>装配周期</view>
+        <view class='input-top '>零件成品交期</view>
+        <view class='input-top '>是否需要表面处理</view>
+        <view class='input-top '>表面处理周期</view>
+        <view class='input-top '>零件半成品交期</view>
+        <view class='input-top '>备注</view>
+        <view class='input-top '>跟催内容</view>
+        <view class='input-top '>跟催节点</view>
+        <view class='input-top '>下图时间</view>
+        <view class='input-top '>下图日期</view>
+        <view class='input-top '>项目编号</view>
+        <view class='input-top '>图号1</view>
       </view>
 
-      <view class="flex-column" id="panel" wx:for="{{all}}" wx:for-index='i' wx:key="">
-
-        <view class="flex-cell flex-row">
-          <text class="flex-cell flex-row">{{all[i].xuhao_A}}</text>
-          <text class="flex-cell flex-row">{{all[i].tiaomaneirong_B}}</text>
-          <text class="flex-cell flex-row">{{all[i].tuhao_C}}</text>
-          <text class="flex-cell flex-row">{{all[i].mingcheng_D}}</text>
-          <text class="flex-cell flex-row">{{all[i].caizhi_E}}</text>
-          <text class="flex-cell flex-row">{{all[i].shuliang_F}}</text>
-          <text class="flex-cell flex-row">{{all[i].danwei_G}}</text>
-          <text class="flex-cell flex-row">{{all[i].taoshu_H}}</text>
-          <text class="flex-cell flex-row">{{all[i].xiangmujiaoqi_I}}</text>
-          <text class="flex-cell flex-row">{{all[i].zongshuliang_J}}</text>
-          <text class="flex-cell flex-row">{{all[i].wuliuzhouqi_K}}</text>
-          <text class="flex-cell flex-row">{{all[i].zhuangpeizhouqi_L}}</text>
-          <text class="flex-cell flex-row">{{all[i].lingjianchengpinzhouqi_M}}</text>
-          <text class="flex-cell flex-row">{{all[i].shifouxuyao_N}}</text>
-          <text class="flex-cell flex-row">{{all[i].bianmianchulizhouqi_O}}</text>
-          <text class="flex-cell flex-row">{{all[i].lingjianbanchengpinzhouqi_P}}</text>
-          <text class="flex-cell flex-row">{{all[i].beizhu_Q}}</text>
-          <text class="flex-cell flex-row">{{all[i].genchuineirong_R}}</text>
-          <text class="flex-cell flex-row">{{all[i].genchuijiedian_S}}</text>
-          <text class="flex-cell flex-row">{{all[i].xiatushijian_T}}</text>
-          <text class="flex-cell flex-row">{{all[i].xiaruriqi_U}}</text>
-          <text class="flex-cell flex-row">{{all[i].xiangmubiaohao_V}}</text>
-          <text class="flex-cell flex-row">{{all[i].tuhao1_W}}</text>
-          <!-- <button bindtap='shan' class="flex-cell flex-row">删</button> -->
-        </view>
-      </view>
-    </scroll-view>
-  </view>
+      <view class="section2" id="panel" wx:for="{{all}}" wx:for-index='i' wx:key="">
+      
+        <view class="input-top ">{{all[i].xuhao_A}}</view>
+          <view class="input-top ">{{all[i].tiaomaneirong_B}}</view>
+          <view class="input-top ">{{all[i].tuhao_C}}</view>
+          <view class="input-top ">{{all[i].mingcheng_D}}</view>
+          <view class="input-top ">{{all[i].caizhi_E}}</view>
+          <view class="input-top ">{{all[i].shuliang_F}}</view>
+          <view class="input-top ">{{all[i].danwei_G}}</view>
+          <view class="input-top ">{{all[i].taoshu_H}}</view>
+          <view class="input-top ">{{all[i].xiangmujiaoqi_I}}</view>
+          <view class="input-top ">{{all[i].zongshuliang_J}}</view>
+          <view class="input-top ">{{all[i].wuliuzhouqi_K}}</view>
+          <view class="input-top ">{{all[i].zhuangpeizhouqi_L}}</view>
+          <view class="input-top ">{{all[i].lingjianchengpinzhouqi_M}}</view>
+          <view class="input-top ">{{all[i].shifouxuyao_N}}</view>
+          <view class="input-top ">{{all[i].bianmianchulizhouqi_O}}</view>
+          <view class="input-top ">{{all[i].lingjianbanchengpinzhouqi_P}}</view>
+          <view class="input-top ">{{all[i].beizhu_Q}}</view>
+          <view class="input-top ">{{all[i].genchuineirong_R}}</view>
+          <view class="input-top ">{{all[i].genchuijiedian_S}}</view>
+          <view class="input-top ">{{all[i].xiatushijian_T}}</view>
+          <view class="input-top ">{{all[i].xiaruriqi_U}}</view>
+          <view class="input-top ">{{all[i].xiangmubiaohao_V}}</view>
+          <view class="input-top ">{{all[i].tuhao1_W}}</view>
+          
+          </view>
+  
+   
+    </view>
+    
+ 
+</scroll-view>
+    
 
 </view>
