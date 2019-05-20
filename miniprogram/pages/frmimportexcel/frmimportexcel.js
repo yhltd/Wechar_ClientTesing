@@ -96,6 +96,7 @@ Page({
 
         var FileManager = wx.getFileSystemManager();
         FileManager.readFile({
+        
           filePath: filepath1,
           encoding: 'utf8',
           success: function(data) {
@@ -140,9 +141,11 @@ Page({
     var that = this;
     //参数2
     wx.cloud.downloadFile({ 
-      fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/database_export-pxn4qHt7T2WJ.json', // 文件 ID,
+      // fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/database_export-pxn4qHt7T2WJ.json',
+      fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/System  Info_20190516231055.json',
+       // 文件 ID,
       success: res => {
-        console.log(res.tempFilePath)        
+        // console.log(res.tempFilePath)        
         var filepath1 = wx.env.USER_DATA_PATH + '/01-项目计划汇总表.xlsm';
         
         filepath1 = res.tempFilePath   
@@ -155,7 +158,7 @@ Page({
           },
           success: function (res) {
             console.log(res.data.imgListData)
-            console.log('name2:' + res.data.imgListData[0].adrs)
+            console.log('name2:' + res.data.imgListData[0].beizhu)
             //将获取到的json数据，存在名字叫list_data的这个数组中
             that.setData({
               all: res.data.imgListData

@@ -51,29 +51,29 @@
       <view class="flex-column" id="panel" wx:for="{{all}}" wx:for-index='i' wx:key="">
 
         <view class="flex-cell flex-row">
-          <text class="flex-cell flex-row">{{all[i].xuhao}}</text>
-          <text class="flex-cell flex-row">{{all[i].tiaomaneirong}}</text>
-          <text class="flex-cell flex-row">{{all[i].tuhao}}</text>
-          <text class="flex-cell flex-row">{{all[i].mingcheng}}</text>
-          <text class="flex-cell flex-row">{{all[i].caizhi}}</text>
-          <text class="flex-cell flex-row">{{all[i].shuliang}}</text>
-          <text class="flex-cell flex-row">{{all[i].danwei}}</text>
-          <text class="flex-cell flex-row">{{all[i].taoshu}}</text>
-          <text class="flex-cell flex-row">{{all[i].xiangmujiaoqi}}</text>
-          <text class="flex-cell flex-row">{{all[i].zongshuliang}}</text>
-          <text class="flex-cell flex-row">{{all[i].wuliuzhouqi}}</text>
-          <text class="flex-cell flex-row">{{all[i].zhuangpeizhouqi}}</text>
-          <text class="flex-cell flex-row">{{all[i].lingjianchengpinjiaoqi}}</text>
-          <text class="flex-cell flex-row">{{all[i].shifouxuyaobiaomianchuli}}</text>
-          <text class="flex-cell flex-row">{{all[i].biaomianchulizhouqi}}</text>
-          <text class="flex-cell flex-row">{{all[i].lingjianbanchengpinjiaofu}}</text>
-          <text class="flex-cell flex-row">{{all[i].beizhu}}</text>
-          <text class="flex-cell flex-row">{{all[i].gencuineirong}}</text>
-          <text class="flex-cell flex-row">{{all[i].genchuijiedian}}</text>
-          <text class="flex-cell flex-row">{{all[i].xiatushjian}}</text>
-          <text class="flex-cell flex-row">{{all[i].xiaturiqi}}</text>
-          <text class="flex-cell flex-row">{{all[i].xiangmubiaohao}}</text>
-          <text class="flex-cell flex-row">{{all[i].tuhao1}}</text>
+          <text class="flex-cell flex-row">{{all[i].xuhao_A}}</text>
+          <text class="flex-cell flex-row">{{all[i].tiaomaneirong_B}}</text>
+          <text class="flex-cell flex-row">{{all[i].tuhao_C}}</text>
+          <text class="flex-cell flex-row">{{all[i].mingcheng_D}}</text>
+          <text class="flex-cell flex-row">{{all[i].caizhi_E}}</text>
+          <text class="flex-cell flex-row">{{all[i].shuliang_F}}</text>
+          <text class="flex-cell flex-row">{{all[i].danwei_G}}</text>
+          <text class="flex-cell flex-row">{{all[i].taoshu_H}}</text>
+          <text class="flex-cell flex-row">{{all[i].xiangmujiaoqi_I}}</text>
+          <text class="flex-cell flex-row">{{all[i].zongshuliang_J}}</text>
+          <text class="flex-cell flex-row">{{all[i].wuliuzhouqi_K}}</text>
+          <text class="flex-cell flex-row">{{all[i].zhuangpeizhouqi_L}}</text>
+          <text class="flex-cell flex-row">{{all[i].lingjianchengpinzhouqi_M}}</text>
+          <text class="flex-cell flex-row">{{all[i].shifouxuyao_N}}</text>
+          <text class="flex-cell flex-row">{{all[i].bianmianchulizhouqi_O}}</text>
+          <text class="flex-cell flex-row">{{all[i].lingjianbanchengpinzhouqi_P}}</text>
+          <text class="flex-cell flex-row">{{all[i].beizhu_Q}}</text>
+          <text class="flex-cell flex-row">{{all[i].genchuineirong_R}}</text>
+          <text class="flex-cell flex-row">{{all[i].genchuijiedian_S}}</text>
+          <text class="flex-cell flex-row">{{all[i].xiatushijian_T}}</text>
+          <text class="flex-cell flex-row">{{all[i].xiaruriqi_U}}</text>
+          <text class="flex-cell flex-row">{{all[i].xiangmubiaohao_V}}</text>
+          <text class="flex-cell flex-row">{{all[i].tuhao1_W}}</text>
           <!-- <button bindtap='shan' class="flex-cell flex-row">删</button> -->
         </view>
       </view>
