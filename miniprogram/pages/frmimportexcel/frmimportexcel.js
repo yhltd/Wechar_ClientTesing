@@ -6,7 +6,7 @@ Page({
    */
   data: {
     all: [],
-    i:0
+    num:0
   },
 
   /**
@@ -86,7 +86,8 @@ Page({
     //参数2
     wx.cloud.downloadFile({
       // fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/hljlc_xiangmujihuahuizongbiao/data/01-项目计划汇总表.xlsm', // 文件 ID
-      fileID:'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/database_export-pxn4qHt7T2WJ.json', // 文件 ID,
+      // fileID:'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/database_export-pxn4qHt7T2WJ.json', // 文件 ID,
+      fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/data.json',
       success: res => {
         console.log(res.tempFilePath)
         // getData(id, this);
@@ -170,8 +171,53 @@ Page({
           
             // 上传数据库
             const db = wx.cloud.database()
+          var  length=res.data.imgListData.length
+            db.collection('SY_LHDataAnalysis_json').get({
+              success: function (res) 
+              {
+                
+                if (length > res.data.length)
+                {
+                  for (var j = 0; j < length - res.data.length; j++)
+                  {
+                  
+                    db.collection('SY_LHDataAnalysis_json').add({
+                      data: {
+                        index: j + res.data.length,
+                        xuhao_A: that.data.all[j + res.data.length].xuhao_A,
+                        tiaomaneirong_B: that.data.all[j + res.data.length].tiaomaneirong_B,
+                        tuhao_C: that.data.all[j + res.data.length].tuhao_C,
+                        mingcheng_D: that.data.all[j + res.data.length].mingcheng_D,
+                        caizhi_E: that.data.all[j + res.data.length].caizhi_E,
+                        shuliang_F: that.data.all[j + res.data.length].shuliang_F,
+                        danwei_G: that.data.all[j + res.data.length].danwei_G,
+                        taoshu_H: that.data.all[j + res.data.length].taoshu_H,
+                        xiangmujiaoqi_I: that.data.all[j + res.data.length].xiangmujiaoqi_I,
+                        zongshuliang_J: that.data.all[j + res.data.length].zongshuliang_J,
+                        wuliuzhouqi_K: that.data.all[j + res.data.length].wuliuzhouqi_K,
+                        zhuangpeizhouqi_L: that.data.all[j + res.data.length].zhuangpeizhouqi_L,
+                        lingjianchengpinzhouqi_M: that.data.all[j + res.data.length].lingjianchengpinzhouqi_M,
+                        shifouxuyao_N: that.data.all[j + res.data.length].shifouxuyao_N,
+                        bianmianchulizhouqi_O: that.data.all[j + res.data.length].bianmianchulizhouqi_O,
+                        lingjianbanchengpinzhouqi_P: that.data.all[j + res.data.length].lingjianbanchengpinzhouqi_P,
+                        beizhu_Q: that.data.all[j + res.data.length].beizhu_Q,
+                        genchuineirong_R: that.data.all[j + res.data.length].genchuineirong_R,
+                        genchuijiedian_S: that.data.all[j + res.data.length].genchuijiedian_S,
+                        xiatushijian_T: that.data.all[j + res.data.length].xiatushijian_T,
+                        xiaruriqi_U: that.data.all[j + res.data.length].xiaruriqi_U,
+                        xiangmubiaohao_V: that.data.all[j + res.data.length].xiangmubiaohao_V,
+                        tuhao1_W: that.data.all[j + res.data.length].tuhao1_W
+
+
+
+                      }
+                    })
+                  }
+                }
+              }
+           })
             for (var i = 0; i < res.data.imgListData.length;i++){
-             
+              
               db.collection('SY_LHDataAnalysis_json').where({
                 index: i,
               }) .get({
@@ -182,6 +228,7 @@ Page({
                     // console.log(res.data.imgListData)
                     // console.log(that.data.all)
                     // res.data 包含该记录的数据
+                  
                     db.collection('SY_LHDataAnalysis_json').doc(res.data[0]._id).update({
                       // data 传入需要局部更新的数据
                       data: {
@@ -216,51 +263,13 @@ Page({
                     )
                   },
 
-                  fail: function (res) {
-
-                    console.log(res.data)
-                    console.log(res.data[0]._id)
-                    console.log(res.data[0].index)
-                    console.log(res.data.imgListData)
-                    console.log(that.data.all)
-                    db.collection('SY_LHDataAnalysis_json').add({
-                      data:{
-                        // xuhao_A: that.data.all[res.data[0].index].xuhao_A,
-                        // tiaomaneirong_B: that.data.all[res.data[0].index].tiaomaneirong_B,
-                        // tuhao_C: that.data.all[res.data[0].index].tuhao_C,
-                        // mingcheng_D: that.data.all[res.data[0].index].mingcheng_D,
-                        // caizhi_E: that.data.all[res.data[0].index].caizhi_E,
-                        // shuliang_F: that.data.all[res.data[0].index].shuliang_F,
-                        // danwei_G: that.data.all[res.data[0].index].danwei_G,
-                        // taoshu_H: that.data.all[res.data[0].index].taoshu_H,
-                        // xiangmujiaoqi_I: that.data.all[res.data[0].index].xiangmujiaoqi_I,
-                        // zongshuliang_J: that.data.all[res.data[0].index].zongshuliang_J,
-                        // wuliuzhouqi_K: that.data.all[res.data[0].index].wuliuzhouqi_K,
-                        // zhuangpeizhouqi_L: that.data.all[res.data[0].index].zhuangpeizhouqi_L,
-                        // lingjianchengpinzhouqi_M: that.data.all[res.data[0].index].lingjianchengpinzhouqi_M,
-                        // shifouxuyao_N: that.data.all[res.data[0].index].shifouxuyao_N,
-                        // bianmianchulizhouqi_O: that.data.all[res.data[0].index].bianmianchulizhouqi_O,
-                        // lingjianbanchengpinzhouqi_P: that.data.all[res.data[0].index].lingjianbanchengpinzhouqi_P,
-                        // beizhu_Q: that.data.all[res.data[0].index].beizhu_Q,
-                        // genchuineirong_R: that.data.all[res.data[0].index].genchuineirong_R,
-                        // genchuijiedian_S: that.data.all[res.data[0].index].genchuijiedian_S,
-                        // xiatushijian_T: that.data.all[res.data[0].index].xiatushijian_T,
-                        // xiaruriqi_U: that.data.all[res.data[0].index].xiaruriqi_U,
-                        // xiangmubiaohao_V: that.data.all[res.data[0].index].xiangmubiaohao_V,
-                        // tuhao1_W: that.data.all[res.data[0].index].tuhao1_W
-
-
-
-                      }
-                    })
-
-                  }
+                  
                 })
 
 
             
             }
-
+          
           }
         })
 

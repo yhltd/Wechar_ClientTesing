@@ -1,7 +1,10 @@
 {
   "pages": [
-    "pages/frmimportexcel/frmimportexcel",
+    "pages/sousuo/sousuo",
     "pages/login/login",
+    
+    "pages/frmimportexcel/frmimportexcel",
+   
     
     "pages/shouye/shouye",
     "pages/index/index",
@@ -28,7 +31,7 @@
     "backgroundColor": "#ffffff",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#262626",
-    "navigationBarTitleText": "SY模拟计算器",
+    "navigationBarTitleText": "云合搜索",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -40,15 +43,10 @@
       {
         "iconPath": "images/shouye.png",
         "selectedIconPath": "images/shouyelv.png",
-        "pagePath": "pages/shouye/shouye",
+        "pagePath": "pages/sousuo/sousuo",
         "text": "首页"
       },
-      {
-        "iconPath": "images/xinxi.png",
-        "selectedIconPath": "images/xinxilv.png",
-        "pagePath": "pages/shuju/shuju",
-        "text": "数据"
-      },
+      
       {
         "iconPath": "images/yonghu.png",
         "selectedIconPath": "images/yonghulv.png",

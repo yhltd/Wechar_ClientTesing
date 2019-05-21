@@ -5,10 +5,13 @@ var login = function (that) {
   var finduser, passwod, adminis;
   var listAll = [];
   const db = wx.cloud.database();
+ 
   db.collection('SY_LHDataAnalysis_user').where({
+    
     name: that.data.name, // 填入当前用户 openid
   }).get({
     success: function (res) {
+     
       listAll.push(res.data)
       // res.data 是包含以上定义的两条记录的数组
       // console.log(res.data)
@@ -37,7 +40,7 @@ var login = function (that) {
           data: true
         })
         wx.switchTab({
-          url: '../shouye/shouye'
+          url: '../sousuo/sousuo'
         })
       }
       else {
@@ -100,7 +103,7 @@ Page({
         if (res.data) {
         
           wx.switchTab({
-            url: '../shouye/shouye'
+            url: '../sousuo/sousuo'
           })
         }
       }

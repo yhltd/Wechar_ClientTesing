@@ -33,7 +33,7 @@
   <view class="divLine"></view>
 </view>
 
-<navigator class="txbt" url='/pages/frmDeleteInputData/frmDeleteInputData'>
+<!-- <navigator class="txbt" url='/pages/frmDeleteInputData/frmDeleteInputData'>
 
   <text class="nav-mainitem-text">清空数据</text>
 </navigator>
@@ -42,19 +42,19 @@
 
 <view class="container">
   <!-- 分割线 -->
-  <view class="divLine"></view>
-</view>
+  <!-- <view class="divLine"></view>
+</view> -->
 
  
-<navigator class="txbt" url='/pages/frmbasedata/frmbasedata'>
+<!-- <navigator class="txbt" url='/pages/frmbasedata/frmbasedata'>
 
   <text class="nav-mainitem-text">设定参数</text>
 </navigator>
 
 <view class="container">
   <!-- 分割线 -->
-  <view class="divLine"></view>
-</view>
+  <!-- <view class="divLine"></view>
+</view> --> 
 <!-- <navigator class="txbt" url='/pages/frmadminform/frmadminform'> -->
 <navigator class="txbt" url='/pages/frmadminindex/frmadminindex'>
 
@@ -62,6 +62,15 @@
 </navigator>
 
 <view class="container">
+  <!-- 分割线 -->
+  <view class="divLine"></view>
+</view>
+
+<navigator class="txbt" url='/pages/frmimportexcel/frmimportexcel'>
+
+  <text class="nav-mainitem-text">上传&读取</text>
+</navigator>
+  <view class="container">
   <!-- 分割线 -->
   <view class="divLine"></view>
 </view>
