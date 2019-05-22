@@ -6,7 +6,9 @@ Page({
    */
   data: {
     inputValue:"",
-    all: []
+    all: [],
+    yeshu: 1,
+    zongyeshu:1
   },
 
   /**
@@ -76,7 +78,7 @@ Page({
 this.sousuo()
   },
 sousuo:function(e){
-  
+ var all= [];
   var that=this
   that.setData({
     all:[]
@@ -88,6 +90,29 @@ sousuo:function(e){
   }).get({
     success: function (res) {
       
+      var length = res.data.length
+
+      var zongyeshu = parseInt((res.data.length - 1) / 10) + 1
+  
+      that.setData({
+        zongyeshu: zongyeshu
+      })
+    
+      for (var x = ((that.data.yeshu - 1) * 10); x < (that.data.yeshu * 10); x++) {
+       
+        all.push(res.data[x])
+      
+      }
+    
+  
+      that.setData({
+        all: all
+        
+      })
+     
+
+      
+      
          that.setData({
           all:res.data
            })
@@ -95,6 +120,35 @@ sousuo:function(e){
     }
     })
  
-}
+},
+shangyiye: function () {
+    var that = this
+    var yeshu = that.data.yeshu - 1
+    console.log(yeshu)
+    console.log(that.data.yeshu)
+    console.log(that.data.zongyeshu)
+    if (yeshu == 0) {
+      yeshu = 1
+    }
 
+    that.setData({
+      yeshu: yeshu
+    })
+    console.log(that.data.yeshu)
+    console.log(that.data.zongyeshu)
+  that.sousuo()
+  },
+  xiayiye: function () {
+    var that = this
+   
+    var yeshu = that.data.yeshu + 1
+    if (yeshu > that.data.zongyeshu) {
+      yeshu = that.data.zongyeshu
+    }
+    that.setData({
+      yeshu: yeshu
+    })
+    
+    that.sousuo()
+  },
 })

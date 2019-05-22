@@ -1,4 +1,4 @@
-// miniprogram/pages/frmimportexcel/frmimportexcel.js
+
 Page({
 
   /**
@@ -6,7 +6,9 @@ Page({
    */
   data: {
     all: [],
-    num:0
+    num:0,
+    yeshu:1,
+    zongyeshu: 1
   },
 
   /**
@@ -81,6 +83,38 @@ Page({
       }
     })
   },
+  shangyiye:function(){
+   var that=this
+    var yeshu = that.data.yeshu-1
+    console.log(yeshu)
+    console.log(that.data.yeshu)
+    console.log(that.data.zongyeshu)
+    if (yeshu == 0 ){
+      yeshu=1
+    }
+
+   that.setData({
+     yeshu: yeshu
+   })
+    console.log(that.data.yeshu)
+    console.log(that.data.zongyeshu)
+    that.read_json()
+  },
+  xiayiye: function () {
+    var that = this
+    console.log(that.data.yeshu)
+    console.log(that.data.zongyeshu)
+    var yeshu = that.data.yeshu + 1
+    if (yeshu >that.data.zongyeshu) {
+      yeshu = that.data.zongyeshu
+    }
+    that.setData({
+      yeshu: yeshu
+    })
+    console.log(that.data.yeshu)
+    console.log(that.data.zongyeshu)
+    that.read_json()
+  },
   read_excel() {
     var that = this;
     //参数2
@@ -144,7 +178,8 @@ Page({
     //参数2
     wx.cloud.downloadFile({ 
       // fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/database_export-pxn4qHt7T2WJ.json',
-      fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/System  Info_20190516231055.json',
+      // fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/System  Info_20190516231055.json',
+      fileID: 'cloud://yhltd-vw99c.7968-yhltd-vw99c/SY_LHDataAnalysis/txt/data.json',
        // 文件 ID,
       success: res => {
         // console.log(res.tempFilePath)        
@@ -159,19 +194,29 @@ Page({
             'Content-Type': 'application/json'
           },
           success: function (res) {
-         
-            console.log('name2:' + res.data.imgListData[0].beizhu)
-            //将获取到的json数据，存在名字叫list_data的这个数组中
+            var length = res.data.imgListData.length
+
+            var zongyeshu = parseInt((res.data.imgListData.length - 1) / 10) + 1
+            // console.log(zongyeshu)
             that.setData({
-              all: res.data.imgListData
+              zongyeshu: zongyeshu
+            })
+            // console.log('name2:' + res.data.imgListData[0].beizhu)
+            //将获取到的json数据，存在名字叫list_data的这个数组中
+            for (var x = ((that.data.yeshu - 1) * 10); x < (that.data.yeshu * 10) ;x++){
+              all.push(res.data.imgListData[x])
+            }
+            console.log(all)
+            that.setData({
+              all: all
               //res代表success函数的事件对，data是固定的，imgListData是上面json数据中imgListData
             },
               // console.log(that.data.all)
             )
-          
+            
             // 上传数据库
             const db = wx.cloud.database()
-          var  length=res.data.imgListData.length
+
             db.collection('SY_LHDataAnalysis_json').get({
               success: function (res) 
               {
@@ -287,4 +332,5 @@ Page({
   onShareAppMessage: function() {
 
   }
+  ,
 })

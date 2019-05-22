@@ -74,3 +74,11 @@
     
  
 </scroll-view>
+<view class='yema'>
+<view bindtap='shangyiye'>上一页</view>
+
+<view class='dangqianyema' >{{yeshu}}</view>
+<view class='zongyeshu' >/ {{zongyeshu}} </view>
+
+<view bindtap='xiayiye'>下一页</view>
+</view>

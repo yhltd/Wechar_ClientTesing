@@ -7,7 +7,8 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"appid": "wxf4c1f213d8b03948",
 	"projectname": "SY_LHDataAnalysis",
