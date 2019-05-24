@@ -11,8 +11,8 @@
 		"checkInvalidKey": true
 	},
 	"appid": "wxf4c1f213d8b03948",
-	"projectname": "SY_LHDataAnalysis",
-	"libVersion": "2.6.4",
+	"projectname": "项目计划",
+	"libVersion": "2.7.0",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

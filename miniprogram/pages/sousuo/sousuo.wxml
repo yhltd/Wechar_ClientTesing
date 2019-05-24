@@ -6,7 +6,7 @@
 <input class='input' bindinput='bindKeyInput' data-name='input1'></input>
 
 </view>
-<button class='soubutton' bindtap='soubutton'>搜</button>
+<button class='soubutton' bindtap='soubutton'>查找</button>
 </view>
 <view class="divLine"></view>
 <view class="lishi">数据：</view>

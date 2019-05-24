@@ -268,7 +268,7 @@ flex-wrap: nowrap
 .soubutton{
   font-size: 10px;
   /* height: 23px;
-  width: 25px; */
+  width: 35px; */
   size: mini;
   margin: 22px 20% 18px 0
 }
