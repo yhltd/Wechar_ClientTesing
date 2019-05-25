@@ -1,32 +1,35 @@
 <view>
   <!-- <text>\n</text> -->
-    <text>本地路径:</text>
-  <view class='txtstyle' >{{filepath1}}</view> 
+  <text>本地路径:</text>
+  <view class='txtstyle'>{{logshow}}</view>
   <text>选择导入文本</text>
   <input name="inputfile" bindinput="bindfilepath" class="input-login" placeholder="......" value='{{filename}}' />
   <view style="display:flex;margin-top:1px;">
-    <button class='btclass' type="primary" bindtap="wx_up">上传</button>
+    <button class='btclass' type="primary" bindtap="wx_upfile">上传</button>
     <button class='btclass' type="primary" bindtap="read_json">同步</button>
-       <button class='btclass' type="warn" bindtap="clear_json">清空</button>
+    <button class='btclass' type="warn" bindtap="clear_json">清空</button>
   </view>
-
 </view>
+<!-- <web-view>
+  <input type='file' />
+  <!-- <input type="text" style="width:156px;position:absolute;"><input type="file" style=""> -->
+<!-- </web-view> --> -->
 <!-- <view> -->
 
-  <!-- <view style="background-image: url('https://7968-yhltd-vw99c-1259252488.tcb.qcloud.la/SY_LHDataAnalysis/28.png?sign=8854d2341c864859921b5ee5d39f796c&t=1558079759'); min-height:98%; background-size: 100% 100%;"> -->
-    <view style=" min-height:98%; background-size: 100% 100%;">
+<!-- <view style="background-image: url('https://7968-yhltd-vw99c-1259252488.tcb.qcloud.la/SY_LHDataAnalysis/28.png?sign=8854d2341c864859921b5ee5d39f796c&t=1558079759'); min-height:98%; background-size: 100% 100%;"> -->
+<view style=" min-height:98%; background-size: 100% 100%;">
 
-    <view class="lishi">数据：</view>
+  <view class="lishi">数据：</view>
 
-    <view class="container">
-      <!-- 分割线 -->
-      <view class="divLine"></view>
-    </view>
-<scroll-view scroll-x class="root">
-  <!-- <form bindsubmit="formSubmit"> -->
-    
-    <view  class='table'>
-      <view  class="section-top">
+  <view class="container">
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+  </view>
+  <scroll-view scroll-x class="root">
+    <!-- <form bindsubmit="formSubmit"> -->
+
+    <view class='table'>
+      <view class="section-top">
         <view class='input-top '>序号</view>
         <view class='input-top '>条码内容</view>
         <view class='input-top '>图号</view>
@@ -53,45 +56,45 @@
       </view>
 
       <view class="section2" id="panel" wx:for="{{all}}" wx:for-index='i' wx:key="">
-      
+
         <view class="input-top ">{{all[i].xuhao_A}}</view>
-          <view class="input-top ">{{all[i].tiaomaneirong_B}}</view>
-          <view class="input-top ">{{all[i].tuhao_C}}</view>
-          <view class="input-top ">{{all[i].mingcheng_D}}</view>
-          <view class="input-top ">{{all[i].caizhi_E}}</view>
-          <view class="input-top ">{{all[i].shuliang_F}}</view>
-          <view class="input-top ">{{all[i].danwei_G}}</view>
-          <view class="input-top ">{{all[i].taoshu_H}}</view>
-          <view class="input-top ">{{all[i].xiangmujiaoqi_I}}</view>
-          <view class="input-top ">{{all[i].zongshuliang_J}}</view>
-          <view class="input-top ">{{all[i].wuliuzhouqi_K}}</view>
-          <view class="input-top ">{{all[i].zhuangpeizhouqi_L}}</view>
-          <view class="input-top ">{{all[i].lingjianchengpinzhouqi_M}}</view>
-          <view class="input-top ">{{all[i].shifouxuyao_N}}</view>
-          <view class="input-top ">{{all[i].bianmianchulizhouqi_O}}</view>
-          <view class="input-top ">{{all[i].lingjianbanchengpinzhouqi_P}}</view>
-          <view class="input-top ">{{all[i].beizhu_Q}}</view>
-          <view class="input-top ">{{all[i].genchuineirong_R}}</view>
-          <view class="input-top ">{{all[i].genchuijiedian_S}}</view>
-          <view class="input-top ">{{all[i].xiatushijian_T}}</view>
-          <view class="input-top ">{{all[i].xiaruriqi_U}}</view>
-          <view class="input-top ">{{all[i].xiangmubiaohao_V}}</view>
-          <view class="input-top ">{{all[i].tuhao1_W}}</view>
-          
-          </view>
-  
-   
+        <view class="input-top ">{{all[i].tiaomaneirong_B}}</view>
+        <view class="input-top ">{{all[i].tuhao_C}}</view>
+        <view class="input-top ">{{all[i].mingcheng_D}}</view>
+        <view class="input-top ">{{all[i].caizhi_E}}</view>
+        <view class="input-top ">{{all[i].shuliang_F}}</view>
+        <view class="input-top ">{{all[i].danwei_G}}</view>
+        <view class="input-top ">{{all[i].taoshu_H}}</view>
+        <view class="input-top ">{{all[i].xiangmujiaoqi_I}}</view>
+        <view class="input-top ">{{all[i].zongshuliang_J}}</view>
+        <view class="input-top ">{{all[i].wuliuzhouqi_K}}</view>
+        <view class="input-top ">{{all[i].zhuangpeizhouqi_L}}</view>
+        <view class="input-top ">{{all[i].lingjianchengpinzhouqi_M}}</view>
+        <view class="input-top ">{{all[i].shifouxuyao_N}}</view>
+        <view class="input-top ">{{all[i].bianmianchulizhouqi_O}}</view>
+        <view class="input-top ">{{all[i].lingjianbanchengpinzhouqi_P}}</view>
+        <view class="input-top ">{{all[i].beizhu_Q}}</view>
+        <view class="input-top ">{{all[i].genchuineirong_R}}</view>
+        <view class="input-top ">{{all[i].genchuijiedian_S}}</view>
+        <view class="input-top ">{{all[i].xiatushijian_T}}</view>
+        <view class="input-top ">{{all[i].xiaruriqi_U}}</view>
+        <view class="input-top ">{{all[i].xiangmubiaohao_V}}</view>
+        <view class="input-top ">{{all[i].tuhao1_W}}</view>
+
+      </view>
+
+
     </view>
-    
- 
-</scroll-view>
-    
-<view class='yema'>
-<view bindtap='shangyiye'>上一页</view>
 
-<view class='dangqianyema' >{{yeshu}}</view>
-<view class='zongyeshu' >/ {{zongyeshu}} </view>
 
-<view bindtap='xiayiye'>下一页</view>
-</view>
+  </scroll-view>
+
+  <view class='yema'>
+    <view bindtap='shangyiye'>上一页</view>
+
+    <view class='dangqianyema'>{{yeshu}}</view>
+    <view class='zongyeshu'>/ {{zongyeshu}} </view>
+
+    <view bindtap='xiayiye'>下一页</view>
+  </view>
 </view>

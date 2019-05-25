@@ -8,6 +8,8 @@ Page({
     num: 0,
     yeshu: 1,
     filepath1: '',
+    logshow: '',
+    selectfile: '',
     zongyeshu: 1
   },
 
@@ -59,12 +61,42 @@ Page({
   onReachBottom: function() {
 
   },
+  wx_upfile() {
+    var myThis = this;
+    var filename;
+  
+    wx.chooseMessageFile({
+      count: 10,
+      type: 'file',
+      success(res) {
+        const tempFilePaths = res.tempFiles[0].path
+        console.log(res.tempFiles[0].path)
+      
+        myThis.setData({          
+          selectfile: tempFilePaths,
+          filename: tempFilePaths
+        })
+     
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '选择文件路径失败' + err.errMsg,
+        })
+        console.error('选择文件路径失败', err)
+      }
+    })
+  },
   wx_up() {
     var myThis = this;
     var filename;
-    wx.chooseImage({
+    // wx.chooseImage({
+    wx.chooseMessageFile({
+      count: 10,
+      type: 'file',
       success(res) {
         const tempFilePaths = res.tempFilePaths
+        // console.log(res.tempFiles[0].path)
         const cloudPath = 'SY_LHDataAnalysis/txt/data' + tempFilePaths[0].match(/\.[^.]+?$/)[0]
 
         wx.cloud.uploadFile({
@@ -74,12 +106,20 @@ Page({
             success(res) {
               myThis.setData({
                 statusCode: res.statusCode,
+                selectfile: tempFilePaths[0],
                 filename: tempFilePaths[0]
               })
             }
           },
           console.log(tempFilePaths[0])
         )
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '选择文件路径失败' + err.errMsg,
+        })
+        console.error('选择文件路径失败', err)
       }
     })
   },
@@ -176,7 +216,7 @@ Page({
     var that = this;
     that.setData({
       all: all
-   
+
     })
   },
 
@@ -192,15 +232,30 @@ Page({
       success: res => {
         console.log(res.tempFilePath)
         var filepath1 = wx.env.USER_DATA_PATH + '/01-项目计划汇总表.xlsm';
-        filepath1 = "https://7968-yhltd-vw99c-1259252488.tcb.qcloud.la/SY_LHDataAnalysis/txt/data.json?sign=00b84b11f8e30e6a2db01f50e61d2aa1&t=1558618048";
+        // filepath1 = "https://7968-yhltd-vw99c-1259252488.tcb.qcloud.la/SY_LHDataAnalysis/txt/data.json?sign=00b84b11f8e30e6a2db01f50e61d2aa1&t=1558618048";
+        //  filepath1 = 'http://www.yhocn.com/data/data.json';
+        filepath1 = this.data.selectfile;
         //  var logCfg = AppDomain.CurrentDomain.BaseDirectory + "config/log4net.config";
         //  console.log(logCfg);
         // filepath1 = res.tempFilePath   
-      
+        //下载数据保存到本地
+        // var tempFilePaths = res.tempFilePaths
+        // wx.saveFile({
+        //   tempFilePath: tempFilePaths[0],
+        //   success: function(res) {
+        //     var savedFilePath = res.savedFilePath
+        //     console.log(savedFilePath);
+        //   }
+        // })
+        //end
+
         that.setData({
-            filepath1: res.tempFilePath
+            // filepath1: res.tempFilePath
           }),
-          console.log('文件路径111：', that.data.filepath1);
+          console.log('文件路径111：', filepath1);
+        that.setData({
+            logshow: '测试log 111' + filepath1
+          }),
           //读取2
           wx.request({
             url: filepath1, //json数据地址
@@ -210,6 +265,9 @@ Page({
             success: function(res) {
               var length = res.data.imgListData.length
 
+              that.setData({
+                logshow: '测试log 222' + length
+              })
               var zongyeshu = parseInt((res.data.imgListData.length - 1) / 10) + 1
               // console.log(zongyeshu)
               that.setData({
@@ -225,6 +283,9 @@ Page({
                   all: all
                   //res代表success函数的事件对，data是固定的，imgListData是上面json数据中imgListData
                 },
+                that.setData({
+                  logshow: '测试log 333' + that.data.all
+                })
                 // console.log(that.data.all)
               )
 
@@ -312,6 +373,13 @@ Page({
                 })
               }
 
+            },
+            fail: err => {
+              wx.showToast({
+                icon: 'none',
+                title: '调用失败' + err.errMsg,
+              })
+              console.error('读取数据文失败：', err)
             }
           })
 

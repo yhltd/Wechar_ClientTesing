@@ -5,7 +5,7 @@ Page({
   data: {
 
     // 小程序版本
-    version: "1.0.0",
+    version: "1.0.2",
 
     // 用户信息
     userInfo: {
