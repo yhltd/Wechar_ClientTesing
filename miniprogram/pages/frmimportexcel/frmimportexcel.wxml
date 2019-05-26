@@ -1,11 +1,11 @@
 <view>
   <!-- <text>\n</text> -->
   <text>本地路径:</text>
-  <view class='txtstyle'>{{logshow}}</view>
+  <!-- <view class='txtstyle'>{{logshow}}</view> -->
   <text>选择导入文本</text>
   <input name="inputfile" bindinput="bindfilepath" class="input-login" placeholder="......" value='{{filename}}' />
   <view style="display:flex;margin-top:1px;">
-    <button class='btclass' type="primary" bindtap="wx_upfile">上传</button>
+    <button class='btclass' type="primary" bindtap="wx_up_new">上传</button>
     <button class='btclass' type="primary" bindtap="read_json">同步</button>
     <button class='btclass' type="warn" bindtap="clear_json">清空</button>
   </view>
