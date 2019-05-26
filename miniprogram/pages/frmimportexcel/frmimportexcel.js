@@ -134,6 +134,8 @@ Page({
       success(res) {
 
         const tempFilePaths = res.tempFiles[0].path
+        if (tempFilePaths.length<1)
+        return
         console.log(res.tempFiles[0].path)
         const cloudPath = 'SY_LHDataAnalysis/txt/data' + tempFilePaths.match(/\.[^.]+?$/)[0]
         console.log('cloudPath' + cloudPath)

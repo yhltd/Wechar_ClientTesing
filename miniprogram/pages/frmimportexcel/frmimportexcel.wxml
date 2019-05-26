@@ -10,11 +10,6 @@
     <button class='btclass' type="warn" bindtap="clear_json">清空</button>
   </view>
 </view>
-<!-- <web-view>
-  <input type='file' />
-  <!-- <input type="text" style="width:156px;position:absolute;"><input type="file" style=""> -->
-<!-- </web-view> --> -->
-<!-- <view> -->
 
 <!-- <view style="background-image: url('https://7968-yhltd-vw99c-1259252488.tcb.qcloud.la/SY_LHDataAnalysis/28.png?sign=8854d2341c864859921b5ee5d39f796c&t=1558079759'); min-height:98%; background-size: 100% 100%;"> -->
 <view style=" min-height:98%; background-size: 100% 100%;">
